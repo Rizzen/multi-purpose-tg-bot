@@ -6,7 +6,6 @@ jobs:
   include:
     - stage: build
       script:
-      - dotnet restore
       - dotnet build
 depoly:
   provier: script
