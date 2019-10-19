@@ -1,6 +1,6 @@
 language: csharp
 solution: WordCounterBot.sln
-mono: core
+mono: none
 dotnet: 3.0
 jobs:
   include:
