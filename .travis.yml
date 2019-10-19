@@ -8,3 +8,11 @@ jobs:
       script:
       - dotnet restore
       - dotnet build
+    - stage: deploy
+      script:
+      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      - docker push "$DOCKER_USERNAME/multi-purpose-tg-bot"
+      on:
+        branch: master
+services:
+  - docker
