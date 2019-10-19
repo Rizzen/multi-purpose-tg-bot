@@ -1,0 +1,10 @@
+language: csharp
+solution: WordCounterBot.sln
+mono: core
+dotnet: 3.0
+jobs:
+  include:
+    - stage: build
+      script:
+      - dotnet restore
+      - dotnet build
