@@ -13,7 +13,5 @@ depoly:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
     - docker build
     - docker push "$DOCKER_USERNAME/multi-purpose-tg-bot"
-  on:
-    branch: master
 services:
   - docker
